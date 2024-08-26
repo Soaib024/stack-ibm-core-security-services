@@ -89,6 +89,48 @@
       ],
       "name": "1b - Cloud object storage",
       "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.75709d42-41a3-41ca-8f45-807652f0d1f7-global"
+    },
+    {
+      "inputs": [
+        {
+          "name": "resource_group_name",
+          "value": "ref:../../inputs/existing_resource_group_name"
+        },
+        {
+          "name": "use_existing_resource_group",
+          "value": true
+        },
+        {
+          "name": "region",
+          "value": "ref:../../inputs/region"
+        },
+        {
+          "name": "prefix",
+          "value": "ref:../../inputs/prefix"
+        },
+        {
+          "name": "existing_kms_instance_crn",
+          "value": "ref:../../members/1a - Key management/outputs/kms_instance_crn"
+        },
+        {
+          "name": "kms_endpoint_type",
+          "value": "private"
+        },
+        {
+          "name": "existing_cos_instance_crn",
+          "value": "ref:../../members/1b - Cloud object storage/outputs/cos_instance_id"
+        },
+        {
+          "name": "enable_platform_logs",
+          "value": "ref:../../inputs/enable_platform_logs_metrics"
+        },
+        {
+          "name": "enable_platform_metrics",
+          "value": "ref:../../inputs/enable_platform_logs_metrics"
+        }
+      ],
+      "name": "2 - Observability",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.9559b390-b310-4373-a61d-c4add658c3cf-global"
     }
   ],
   "outputs": [
@@ -97,8 +139,16 @@
       "value": "ref:../../members/1a - Key management/outputs/kms_instance_crn"
     },
     {
+      "name": "monitoring_crn",
+      "value": "ref:../../members/2 - Observability/outputs/cloud_monitoring_crn"
+    },
+    {
       "name": "cos_instance_crn",
       "value": "ref:../../members/1b - Cloud object storage/outputs/cos_instance_id"
+    },
+    {
+      "name": "log_analysis_crn",
+      "value": "ref:../../members/2 - Observability/outputs/log_analysis_crn"
     }
   ]
 }
