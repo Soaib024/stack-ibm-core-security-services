@@ -29,7 +29,7 @@
       "required": false,
       "type": "boolean",
       "hidden": false,
-      "default": true,
+      "default": false,
       "custom_config": {}
     },
     {
