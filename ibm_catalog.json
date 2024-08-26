@@ -1,8 +1,8 @@
 {
 	"products": [
 		{
-			"label": "IBM Cloud Essential Security and Observability Services",
-			"name": "deploy-arch-ibm-core-security-svcs",
+			"label": "Soaib core base",
+			"name": "deploy-arch-soaib-core-security-base",
 			"product_kind": "solution",
 			"tags": [
 				"solution",
