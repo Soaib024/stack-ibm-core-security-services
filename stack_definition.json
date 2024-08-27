@@ -67,38 +67,12 @@
       ],
       "name": "1a - Key management",
       "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.650ff7c9-5a41-4d32-a0db-6720ff56a016-global"
-    },
-    {
-      "inputs": [
-        {
-          "name": "resource_group_name",
-          "value": "ref:../../inputs/existing_resource_group_name"
-        },
-        {
-          "name": "existing_resource_group",
-          "value": true
-        },
-        {
-          "name": "cos_instance_name",
-          "value": "core-services"
-        },
-        {
-          "name": "prefix",
-          "value": "ref:../../inputs/prefix"
-        }
-      ],
-      "name": "1b - storage",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.75709d42-41a3-41ca-8f45-807652f0d1f7-global"
     }
   ],
   "outputs": [
     {
       "name": "key_management_service_instance_crn",
       "value": "ref:../../members/1a - Key management/outputs/kms_instance_crn"
-    },
-    {
-      "name": "cos_instance_crn",
-      "value": "ref:../../members/1b - storage/outputs/cos_instance_id"
     }
   ]
 }
